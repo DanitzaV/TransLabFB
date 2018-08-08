@@ -1,0 +1,32 @@
+.img {
+    width: 6em;
+}
+.login{
+    margin-top: 3em;
+}
+/* estilos de botones */
+.xl{
+    width: 15em;
+}
+.btn-yellow{
+    background-color: #F6A800;
+}
+/* fondo del login */
+.fondoLogin{
+    background-color: #3E3F41;
+    color: white;
+}
+/* fondo de las demas pantallas */
+.fondoPantallas{
+    background-color: #DDDEE0;
+}
+.fondonavbar{
+    background-color: #3E3F41;
+}
+/* estilos de imagen */
+.img-user{
+    width: 12em;
+}
+.sidenav{
+    width: 223px;
+}

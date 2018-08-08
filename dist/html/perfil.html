@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/css/style.css">
+    <title>TransLab</title>
+</head>
+<body class="fondoPantallas">
+        <nav class="fondonavbar">
+            <a href="#" data-target="slide-out" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right ">
+                    <li><a href="#">TransLab</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                  </ul>
+        </nav>
+        
+        <ul id="slide-out" class="sidenav">
+            <li>
+                <a class="waves-effect">Ver Saldo</a>
+            </li>
+            <li>
+                <a class="waves-effect" href="#!">Calcular Tarifa</a>
+            </li>
+            <li>
+                <a class="waves-effect">Perfil</a>
+            </li>
+            <li>
+                <a class="waves-effect">Preguntas Frecuentes</a>
+            </li>
+            <li>
+                <a class="waves-effect">Home</a>
+            </li>
+            <li>
+                <a class="waves-effect">Cerrar Sesion</a>
+            </li>
+        </ul>
+        <div class="input-field col s12 center-align">
+                <img src="../../src/img/user.png" alt="" class=" responsive-img img-user">
+               
+        </div>
+    <div class="container center-align ">
+        <div class="row">
+    
+    
+            <div class="input-field col s12">
+                <i class="material-icons prefix">credit_card</i>
+                <input id="icon_telephone"  type="number" class="validate">
+                <label for="icon_telephone">Numero Bip</label>
+            </div>
+            <button class="btn btn-yellow" onclick="agregarTarjeta()">Agregar Tarjeta</button>
+        </div>
+        <div class="row" id="contenedorBips">
+    
+        </div>
+    
+    </div>
+       
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+         // Initialize Firebase
+         var config = {
+        apiKey: "AIzaSyDheOrFj79cEw_FtjkSgDEB2FlqxZFVeLI",
+        authDomain: "translab-43d41.firebaseapp.com",
+        databaseURL: "https://translab-43d41.firebaseio.com",
+        projectId: "translab-43d41",
+        storageBucket: "",
+        messagingSenderId: "787508874768"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="../../src/js/data.js"></script>
+    <script src="../../src/js/main.js"></script>
+</body>
+</html>

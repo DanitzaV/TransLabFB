@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <title>TransLab</title>
+</head>
+<body class="fondoLogin">
+    <div class="container center-align login">
+        <div class="row">
+            <div class="col s12">
+                <img src="../src/img/imagen.png" class="img-responsive img" alt="">
+                <h3>LAB-CAR</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">contraseña</label>
+                    </div>
+                    <button class="btn btn-yellow"  onclick="login()">Inicia Sesion</button>  
+                </div>
+                <div class="row">
+                        <div class="col s12">
+                            <p>¿olvidaste tu contraseña?</p>
+                        </div>
+                        <div class="col s12">
+                            <p>NO TIENES CUENTA <a href="html/registro.html">REGISTRATE</a></p>
+                        </div>
+            </div>
+        </div>
+    </div>
+       
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+         // Initialize Firebase
+         var config = {
+        apiKey: "AIzaSyDheOrFj79cEw_FtjkSgDEB2FlqxZFVeLI",
+        authDomain: "translab-43d41.firebaseapp.com",
+        databaseURL: "https://translab-43d41.firebaseio.com",
+        projectId: "translab-43d41",
+        storageBucket: "",
+        messagingSenderId: "787508874768"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="../src/js/data.js"></script>
+    <script src="../src/js/main.js"></script>
+</body>
+</html>

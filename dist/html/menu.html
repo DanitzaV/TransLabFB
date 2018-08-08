@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/css/style.css">
+    <title>TransLab</title>
+</head>
+<body class="fondoPantallas">
+        <nav class="fondonavbar">
+            <a href="#" data-target="slide-out" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right ">
+                    <li><a href="#">TransLab</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                  </ul>
+        </nav>
+        
+        <ul id="slide-out" class="sidenav">
+            <li>
+                <a class="waves-effect" href="../html/saldo.html">Ver Saldo</a>
+            </li>
+            <li>
+                <a class="waves-effect" href="../html/tarifa.html">Calcular Tarifa</a>
+            </li>
+            <li>
+                <a class="waves-effect" href="../html/perfil.html">Perfil</a>
+            </li>
+            <li>
+                <a class="waves-effect">Preguntas Frecuentes</a>
+            </li>
+            <li>
+                <a class="waves-effect" href="../html/menu.html">Home</a>
+            </li>
+            <li>
+                <a class="waves-effect" onclick="cerrarSesion()">Cerrar Sesion</a>
+            </li>
+        </ul>
+        
+    <div class="container center-align login">
+    
+        <div class="row">
+            <div class="col s12">
+                <a class="waves-effect waves-light btn-large xl btn-yellow">Ver Saldo</a>
+    
+            </div>
+            <div class="input-field col s12">
+                <a class="waves-effect waves-light btn-large xl btn-yellow">Calcular Tarifa</a>
+    
+            </div>
+            <div class="input-field col s12">
+                <a class="waves-effect waves-light btn-large xl btn-yellow">Perfil</a>
+    
+            </div>
+            <div class="input-field col s12">
+                <a class="waves-effect waves-light btn-large xl btn-yellow">Preguntas Frecuentes</a>
+            </div>
+    
+        </div>
+    
+    </div>
+       
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+         // Initialize Firebase
+         var config = {
+        apiKey: "AIzaSyDheOrFj79cEw_FtjkSgDEB2FlqxZFVeLI",
+        authDomain: "translab-43d41.firebaseapp.com",
+        databaseURL: "https://translab-43d41.firebaseio.com",
+        projectId: "translab-43d41",
+        storageBucket: "",
+        messagingSenderId: "787508874768"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="../../src/js/data.js"></script>
+    <script src="../../src/js/main.js"></script>
+</body>
+</html>
