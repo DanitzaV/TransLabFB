@@ -1,6 +1,7 @@
 $(document).ready(function () {
   $('.sidenav').sidenav();
   $('select').formSelect();
+  $('.collapsible').collapsible();
 });
 let uiduser;
 
@@ -32,10 +33,10 @@ function tarjetaBip() {
 
   let urls
   if (inputBips == '') {
-    urls = `http://www.psep.cl/api/Bip.php?&numberBip=${selectinput}`;
+    urls = `http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${selectinput}`;
 
   } else {
-    urls = `http://www.psep.cl/api/Bip.php?&numberBip=${inputBips}`;
+    urls = `http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${inputBips}`;
     document.getElementById("inputBip").value = "";
 
 
@@ -47,7 +48,7 @@ function tarjetaBip() {
     verSaldo(respuestaJson)
     console.log(saldo)
   }).catch(err => {
-    alert('numero incorrecto , ingrese numero valido')
+    console.log(err)
   })
 
 
