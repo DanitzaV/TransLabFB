@@ -33,10 +33,10 @@ function tarjetaBip() {
 
   let urls
   if (inputBips == '') {
-    urls = `http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${selectinput}`;
+    urls = `https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${selectinput}`;
 
   } else {
-    urls = `http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${inputBips}`;
+    urls = `https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${inputBips}`;
     document.getElementById("inputBip").value = "";
 
 
@@ -59,11 +59,11 @@ function calcularTarifa() {
   
   let urls
      if(inputBips == ''){
-       urls = `http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${selectinput}`;
+       urls = `https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${selectinput}`;
        
      }else{
        
-       urls = `http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${inputBips}`;
+       urls = `https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${inputBips}`;
        document.getElementById("valueinputBip").value = "";
  
        
