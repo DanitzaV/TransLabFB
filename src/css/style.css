@@ -30,3 +30,13 @@
 .sidenav{
     width: 223px;
 }
+#nav-mobile li a{
+    font-size: 134%;
+    margin-left: 1em;
+}
+.fondo-yellow{
+   background-color: #F6A800;
+   margin-top: 0;
+   padding: 1em;
+
+}
