@@ -18,6 +18,10 @@ firebase.auth().onAuthStateChanged((user) =>{
             // let option = `<option> ${bips.val()} </option>`;
             selectBip.appendChild(option)
         });
+    inputGroupSelect02.innerHTML += `<option value="769">Horario Alto</option>
+  <option value="680">Horario Medio</option>
+  <option value="630">Horario Bajo</option>
+   `;
    
 });
 

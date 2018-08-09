@@ -7,9 +7,15 @@ let uiduser;
 
 function agregarTarjeta() {
   const numeroBip = icon_telephone.value;
-
-  firebase.database().ref(`bips/${uiduser}`).child(`numBip`).push(numeroBip);
+  if (numeroBip == '') {
+    alert('ingrese el numero de bip');
+  } else {
+    firebase.database().ref(`bips/${uiduser}`).child(`numBip`).push(numeroBip);
   document.getElementById('icon_telephone').value = '';
+  }
+ 
+
+  
   // firebase.database().ref(`bips/${uiduser}`).set({
   //   numBip: arraytarjetas
   // });
@@ -25,11 +31,10 @@ function tarjetaBip() {
   let inputBips = inputBip.value;
 
   let urls
-  if (inputBip == '') {
+  if (inputBips == '') {
     urls = `http://www.psep.cl/api/Bip.php?&numberBip=${selectinput}`;
 
   } else {
-
     urls = `http://www.psep.cl/api/Bip.php?&numberBip=${inputBips}`;
     document.getElementById("inputBip").value = "";
 
@@ -39,16 +44,10 @@ function tarjetaBip() {
   fetch(urls).then(response => response.json()
   ).then(respuestaJson => {
     // const saldo = respuestaJson[Saldotarjeta];
-
     verSaldo(respuestaJson)
-
-    //   saldoTotal.innerHTML += `<div class="col-12 col-sm-12 col-md-12 col-lg-12 contSaldo text-center" >
-    //   <h4>Saldo Total</h4>
-    //   <p>${respuestaJson["Saldo tarjeta"]}</p>
-    //  </div>`
     console.log(saldo)
   }).catch(err => {
-    console.log('numero no encontrado')
+    alert('numero incorrecto , ingrese numero valido')
   })
 
 
