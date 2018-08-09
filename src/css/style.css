@@ -45,3 +45,15 @@
     padding: 0.5em;
 
 }
+
+.contSaldo h5{
+    background-color: #F6A800;
+    color: black;
+    margin-bottom: 0;
+}
+.contSaldo p{
+    background-color: white;
+    color: black;
+    margin-top: 0;
+    padding: 1em;
+}
