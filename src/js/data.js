@@ -132,7 +132,7 @@ function login() {
 function cerrarSesion() {
   firebase.auth().signOut()
     .then(() => {
-      location = '../../dist/index.html';
+      location = '../index.html';
     })
     .catch();
 }
