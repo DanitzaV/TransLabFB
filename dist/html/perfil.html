@@ -10,14 +10,38 @@
 </head>
 <body class="fondoPantallas">
     <nav class="fondonavbar">
-        <a href="#" data-target="slide-out" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-        </a>
-        <ul id="nav-mobile" class="right ">
-                <li><a href="#">TransLab</a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-              </ul>
+        <div class="nav-wrapper">
+            <a href="#" data-target="slide-out" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down ">
+                    <a href="#" class="brand-logo">TransLab</a>
+                </ul>
+    
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a class="waves-effect" href="../html/saldo.html">Ver Saldo</a>
+                </li>
+                <li>
+                    <a class="waves-effect" href="../html/tarifa.html">Calcular Tarifa</a>
+                </li>
+                <li>
+                    <a class="waves-effect" href="../html/perfil.html">Perfil</a>
+                </li>
+                <li>
+                    <a class="waves-effect" href="preguntasFre.html">Preguntas Frecuentes</a>
+                </li>
+                <li>
+                    <a class="waves-effect" href="../html/menu.html">Home</a>
+                </li>
+                <li>
+                    <a class="waves-effect" onclick="cerrarSesion()">Cerrar Sesion</a>
+                </li>
+            </ul>
+            <ul id="nav-mobile" class="right hide-on-med-and-up show-on-medium">
+                <a href="#" class="brand-logo">TransLab</a>
+            </ul>
+        </div>
     </nav>
     
     <ul id="slide-out" class="sidenav">
