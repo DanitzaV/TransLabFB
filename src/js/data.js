@@ -15,7 +15,6 @@ function agregarTarjeta() {
   document.getElementById('icon_telephone').value = '';
   }
  
-
   
   // firebase.database().ref(`bips/${uiduser}`).set({
   //   numBip: arraytarjetas
@@ -27,7 +26,7 @@ function agregarTarjeta() {
 
 
 function tarjetaBip() {
-
+ 
   let selectinput = selectBip.value;
   let inputBips = inputBip.value;
 
@@ -120,7 +119,7 @@ function login() {
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
 
-      location = '../../dist/html/perfil.html';
+      location = 'html/perfil.html';
       console.log("Usuario con login exitoso");
     })
     .catch((error) => {

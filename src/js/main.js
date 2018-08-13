@@ -27,11 +27,13 @@ firebase.auth().onAuthStateChanged((user) =>{
 
 
 const verSaldo = (infoBip) => {
+
     let saldoBip = infoBip.saldoTarjeta;
     saldoTotal.innerHTML = `<div class="col s12 col m12 col l12 col xl12 contSaldo center-align" >
        <h5>Saldo Total</h5>
       <p>${saldoBip}</p>
       </div>`
+      return saldoBip;
 }
 
 function mostrarTarifayCosto(selectinput,saldo_final) {
