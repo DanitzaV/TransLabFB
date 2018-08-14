@@ -12,10 +12,8 @@ function agregarTarjeta() {
     alert('ingrese el numero de bip');
   } else {
     firebase.database().ref(`bips/${uiduser}`).child(`numBip`).push(numeroBip);
-  document.getElementById('icon_telephone').value = '';
+    // document.getElementById('icon_telephone').value = '';
   }
- 
-  
   // firebase.database().ref(`bips/${uiduser}`).set({
   //   numBip: arraytarjetas
   // });
@@ -36,7 +34,7 @@ function tarjetaBip() {
 
   } else {
     urls = `https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${inputBips}`;
-    document.getElementById("inputBip").value = "";
+    // document.getElementById("inputBip").value = "";
 
 
   }
@@ -88,7 +86,7 @@ function calcularTarifa() {
     console.log(saldo);
     console.log(saldoBip)
       let selectinput = parseInt(inputGroupSelect02.value); 
-      console.log(selectinput)
+      console.log(selectinput) 
       let saldo_final = (parseInt(saldo) - selectinput);
       console.log(saldo_final)
      // document.getElementById('resultadosaldo').style.display = 'block';
@@ -103,7 +101,7 @@ function registro() {
   const passwordValue = password.value;
   if (passwordValue.length <= 8 && passwordValue.length > 3) {
     firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
-      .then((response) => {
+      .then((response) => {x8
         location = '../../dist/index.html'
         console.log('usuario registrado');
       })

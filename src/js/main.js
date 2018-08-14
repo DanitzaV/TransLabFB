@@ -1,4 +1,3 @@
-
 let useremail;
 firebase.auth().onAuthStateChanged((user) =>{
     uiduser = user.uid;
