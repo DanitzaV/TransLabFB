@@ -12,7 +12,7 @@ function agregarTarjeta() {
     alert('ingrese el numero de bip');
   } else {
     firebase.database().ref(`bips/${uiduser}`).child(`numBip`).push(numeroBip);
-    // document.getElementById('icon_telephone').value = '';
+    document.getElementById('icon_telephone').value = '';
   }
   // firebase.database().ref(`bips/${uiduser}`).set({
   //   numBip: arraytarjetas
@@ -34,7 +34,7 @@ function tarjetaBip() {
 
   } else {
     urls = `https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${inputBips}`;
-    // document.getElementById("inputBip").value = "";
+    document.getElementById("inputBip").value = "";
 
 
   }
@@ -61,7 +61,7 @@ function calcularTarifa() {
      }else{
        
        urls = `https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${inputBips}`;
-       document.getElementById("valueinputBip").value = "";
+      document.getElementById("inputBip").value = "";
  
        
      }
