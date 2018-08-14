@@ -5,7 +5,6 @@ $(document).ready(function () {
 });
 let uiduser;
 
-
 function agregarTarjeta() {
   const numeroBip = icon_telephone.value;
   if (numeroBip == '') {
@@ -14,10 +13,6 @@ function agregarTarjeta() {
     firebase.database().ref(`bips/${uiduser}`).child(`numBip`).push(numeroBip);
     document.getElementById('icon_telephone').value = '';
   }
-  // firebase.database().ref(`bips/${uiduser}`).set({
-  //   numBip: arraytarjetas
-  // });
-
 }
 
 
@@ -68,33 +63,26 @@ function calcularTarifa() {
  
    fetch(urls).then(response => response.json()
    ).then(respuestaJson => {
-     // const saldo = respuestaJson[Saldotarjeta];
-     
      saldo(respuestaJson)
-    
-   //   saldoTotal.innerHTML += `<div class="col-12 col-sm-12 col-md-12 col-lg-12 contSaldo text-center" >
-   //   <h4>Saldo Total</h4>
-   //   <p>${respuestaJson["Saldo tarjeta"]}</p>
-   //  </div>`
     console.log(respuestaJson)
    }).catch(err => {
        console.log('numero no encontrado'+  err)
    })
-   function saldo(infoBip) {
-    let saldoBip = infoBip.saldoTarjeta;
-    let saldo = saldoBip.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "");
-    console.log(saldo);
-    console.log(saldoBip)
-      let selectinput = parseInt(inputGroupSelect02.value); 
-      console.log(selectinput) 
-      let saldo_final = (parseInt(saldo) - selectinput);
-      console.log(saldo_final)
-     // document.getElementById('resultadosaldo').style.display = 'block';
-    mostrarTarifayCosto(selectinput,saldo_final)
-   
-   }
+ 
    
  } 
+ function saldo(infoBip) {
+  let saldoBip = infoBip.saldoTarjeta;
+  let saldo = saldoBip.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "");
+  console.log(saldo);
+  console.log(saldoBip)
+    let selectinput = parseInt(inputGroupSelect02.value); 
+    console.log(selectinput) 
+    let saldo_final = (parseInt(saldo) - selectinput);
+    console.log(saldo_final)
+  mostrarTarifayCosto(selectinput,saldo_final)
+ 
+ }
 
 function registro() {
   const emailValue = email.value;
