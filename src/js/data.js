@@ -8,9 +8,9 @@ let uiduser;
 function agregarTarjeta() {
   const numeroBip = icon_telephone.value;
   if (numeroBip == '') {
-    alert('ingrese el numero de bip');
+  return  alert('ingrese el numero de bip');
   } else {
-    firebase.database().ref(`bips/${uiduser}`).child(`numBip`).push(numeroBip);
+    return firebase.database().ref(`bips/${uiduser}`).child(`numBip`).push(numeroBip);
     document.getElementById('icon_telephone').value = '';
   }
 }
@@ -22,6 +22,7 @@ function tarjetaBip() {
  
   let selectinput = selectBip.value;
   let inputBips = inputBip.value;
+  let resultado= '';
 
   let urls
   if (inputBips == '') {
@@ -37,6 +38,8 @@ function tarjetaBip() {
   fetch(urls).then(response => response.json()
   ).then(respuestaJson => {
     console.log(respuestaJson)
+    resultado = respuestaJson.saldoTarjeta;
+    
     verSaldo(respuestaJson)
     console.log(saldo)
   }).catch(err => {
@@ -89,8 +92,8 @@ function registro() {
   const passwordValue = password.value;
   if (passwordValue.length <= 8 && passwordValue.length > 3) {
     firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
-      .then((response) => {x8
-        location = '../../dist/index.html'
+      .then((response) => {
+        location = '../index.html'
         console.log('usuario registrado');
       })
       .catch((error) => {

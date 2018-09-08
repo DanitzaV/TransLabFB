@@ -41,7 +41,7 @@ function mostrarTarifayCosto(selectinput,saldo_final) {
 <p>$ ${selectinput}</p>
 </div>
 <div class="col l12 col s12 col m12 col xl12 contSaldo center-align" >
-<h5>Costo total</h5>
+<h5>Saldo total</h5>
 <p>$ ${saldo_final}</p>
 </div>`;
 }
